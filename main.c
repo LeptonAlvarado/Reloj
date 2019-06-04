@@ -8,6 +8,8 @@
 #FUSES NOLPT1OSC                //Timer1 configured for higher power operation
 #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
 #FUSES NOXINST                  //Extended set extension and Indexed Addressing mode disabled (Legacy mode)
+#use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8)
+#use i2c(MASTER,FAST,SDA=PIN_C4,SCL=PIN_C3)
 
 #use delay(clock=16000000)
 
